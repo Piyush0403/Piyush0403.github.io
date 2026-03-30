@@ -216,26 +216,6 @@ window.addEventListener('load', () => {
     if (typingEl) tick();
 });
 
-// Certifications filter
-const certFilters = document.querySelectorAll('.cert-filter');
-const certCards = document.querySelectorAll('.cert-card');
-
-certFilters.forEach(filterBtn => {
-    filterBtn.addEventListener('click', () => {
-        certFilters.forEach(f => f.classList.remove('active'));
-        filterBtn.classList.add('active');
-
-        const category = filterBtn.getAttribute('data-filter');
-        certCards.forEach(card => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-                card.classList.remove('hidden');
-            } else {
-                card.classList.add('hidden');
-            }
-        });
-    });
-});
-
 // Add loading animation for project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
