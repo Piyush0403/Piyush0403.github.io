@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Piyush Gautam | Business Analytics & Software Engineering Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -39,6 +39,9 @@
                     <a href="#skills" class="nav-link">Skills</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
                     <a href="#roles" class="nav-link">Open to Roles</a>
                 </li>
                 <li class="nav-item">
@@ -61,7 +64,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Hi, I'm Piyush Gautam</h1>
-                <p class="hero-subtitle">Business Analytics Enthusiast | Software Engineer | Data-Driven Problem Solver</p>
+                <p class="hero-subtitle"><span id="typing-text"></span><span class="typing-cursor">|</span></p>
                 <p class="hero-description">Driven to turn data into insights and design enterprise-scale solutions for complex business problems</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -425,6 +428,106 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-filters">
+                <button class="cert-filter active" data-filter="all">All</button>
+                <button class="cert-filter" data-filter="cloud">Cloud</button>
+                <button class="cert-filter" data-filter="data">Data & Analytics</button>
+                <button class="cert-filter" data-filter="enterprise">Enterprise</button>
+            </div>
+            <div class="certs-grid">
+
+                <div class="cert-card" data-category="cloud">
+                    <div class="cert-badge cloud-badge">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category-tag cloud">Cloud</span>
+                        <h3>AWS Certified Cloud Practitioner</h3>
+                        <p class="cert-issuer"><i class="fas fa-building"></i> Amazon Web Services</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: 2023</p>
+                        <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: AWS-CLF-C02</p>
+                        <a href="#" class="cert-verify-btn">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="enterprise">
+                    <div class="cert-badge enterprise-badge">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category-tag enterprise">Enterprise</span>
+                        <h3>Salesforce Certified Administrator</h3>
+                        <p class="cert-issuer"><i class="fas fa-building"></i> Salesforce</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: 2022</p>
+                        <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: SF-ADM-001</p>
+                        <a href="#" class="cert-verify-btn">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="data">
+                    <div class="cert-badge data-badge">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category-tag data">Data & Analytics</span>
+                        <h3>Google Data Analytics Professional Certificate</h3>
+                        <p class="cert-issuer"><i class="fas fa-building"></i> Google / Coursera</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: 2024</p>
+                        <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: GDA-2024</p>
+                        <a href="#" class="cert-verify-btn">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="data">
+                    <div class="cert-badge data-badge">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category-tag data">Data & Analytics</span>
+                        <h3>Python for Data Science, AI & Development</h3>
+                        <p class="cert-issuer"><i class="fas fa-building"></i> IBM / Coursera</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: 2023</p>
+                        <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: IBM-PY-DS</p>
+                        <a href="#" class="cert-verify-btn">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="data">
+                    <div class="cert-badge data-badge">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category-tag data">Data & Analytics</span>
+                        <h3>Tableau Desktop Specialist</h3>
+                        <p class="cert-issuer"><i class="fas fa-building"></i> Tableau / Salesforce</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: 2022</p>
+                        <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: TDS-2022</p>
+                        <a href="#" class="cert-verify-btn">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="enterprise">
+                    <div class="cert-badge enterprise-badge">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="cert-content">
+                        <span class="cert-category-tag enterprise">Enterprise</span>
+                        <h3>SAP Certified Technology Associate</h3>
+                        <p class="cert-issuer"><i class="fas fa-building"></i> SAP</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: 2021</p>
+                        <p class="cert-id"><i class="fas fa-fingerprint"></i> Credential ID: SAP-CTA-2021</p>
+                        <a href="#" class="cert-verify-btn">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Open to Roles Section -->
     <section id="roles" class="roles">
         <div class="container">
@@ -596,4 +699,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
