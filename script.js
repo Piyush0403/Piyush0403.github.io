@@ -178,8 +178,63 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {});
+// Typing animation for hero subtitle
+window.addEventListener('load', () => {
+    const roles = [
+        'Business Analytics Enthusiast',
+        'Software Engineer',
+        'Data-Driven Problem Solver',
+        'Enterprise Integration Expert'
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingEl = document.getElementById('typing-text');
+
+    function tick() {
+        const current = roles[roleIndex];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingEl.textContent = current.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === current.length) {
+            setTimeout(() => { isDeleting = true; tick(); }, 2200);
+            return;
+        }
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+
+        setTimeout(tick, isDeleting ? 45 : 90);
+    }
+
+    if (typingEl) tick();
+});
+
+// Certifications filter
+const certFilters = document.querySelectorAll('.cert-filter');
+const certCards = document.querySelectorAll('.cert-card');
+
+certFilters.forEach(filterBtn => {
+    filterBtn.addEventListener('click', () => {
+        certFilters.forEach(f => f.classList.remove('active'));
+        filterBtn.classList.add('active');
+
+        const category = filterBtn.getAttribute('data-filter');
+        certCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+});
 
 // Add loading animation for project cards
 document.querySelectorAll('.project-card').forEach(card => {
